@@ -33,3 +33,22 @@ guest-stars:
     - /api/contacts_persoone/v1
     - /api/rendez_vous/v1
     - /api/personnes/v1
+
+zuul:
+   routes:
+      route-couvertures-a-date:
+         path: "/abcd/couvertures_contractuelles/v*1/couvertures_a_date/**"
+      route-couvertures-contractuelles:
+         path: "/abcd/couvertures_contractuelles/v*1/couvertures/**"
+      route-devis:
+         path: "/abcd/devis/v*1/devis/**"
+      route-risques-a-assurer:
+         path: "/abcd/devis/v*1/risques_a_assurer/**"
+      route-foyers-v1:
+         path: "/xyz/personnes_physiques/v*1/foyers/**"
+      route-personnes-physiques-v1:
+         path: "/xyz/personnes_physiques/v*1/personnes_physiques/**"
+      route-produits-concurrence:
+         path: "/xyz/personnes_physiques/v*1/produits_concurrence/**"
+      route-donnees-references-v5:
+         path: "/xyz/donnees_references/v5/**"

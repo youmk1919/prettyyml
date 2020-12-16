@@ -23,6 +23,16 @@ function main() {
   guest-stars.apis[1]: "/api/rendez_vous/v1"
   guest-stars.apis[2]: "/api/personnes/v1"
 
+  zuul.retryable: true
+  zuul.routes.route-couvertures-a-date.path: "/abcd/couvertures_contractuelles/v*1/couvertures_a_date/**"
+  zuul.routes.route-couvertures-contractuelles.path: "/abcd/couvertures_contractuelles/v*1/couvertures/**"
+  zuul.routes.route-devis.path: "/abcd/devis/v*1/devis/**"
+  zuul.routes.route-risques-a-assurer.path: "/abcd/devis/v*1/risques_a_assurer/**"
+  zuul.routes.route-foyers-v1.path: "/xyz/personnes_physiques/v*1/foyers/**"
+  zuul.routes.route-personnes-physiques-v1.path: "/xyz/personnes_physiques/v*1/personnes_physiques/**"
+  zuul.routes.route-produits-concurrence.path: "/xyz/personnes_physiques/v*1/produits_concurrence/**"
+  zuul.routes.route-donnees-references-v5.path: "/xyz/donnees_references/v5/**"
+
 `;
   const input = YAML.parse(inputRaw);
   let output = {};
