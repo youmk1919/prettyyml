@@ -1,0 +1,35 @@
+common-name:
+  entities:
+    - key: key1
+      roles:
+        - ROLE_ADMIN
+      callerName: call1
+    - key: key2
+      roles:
+        - ROLE_USER
+      callerName: call2
+    - key: key3
+      roles:
+        - ROLE_ADMIN
+      callerName: call3
+
+eureka:
+  client:
+    enabled: true
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://good-tizspm-upm-prod-i:8080/eu
+    eureka-connection-idle-timeout-seconds: 15
+    eureka-server-connect-timeout-seconds: 3
+    eureka-server-read-timeout-seconds: 4
+    registry-fetch-interval-seconds: 10
+  instance:
+    preferIpAddress: true
+
+guest-stars:
+  bubble: []
+  apis:
+    - /api/contacts_persoone/v1
+    - /api/rendez_vous/v1
+    - /api/personnes/v1
